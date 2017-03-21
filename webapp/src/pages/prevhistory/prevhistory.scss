@@ -1,0 +1,87 @@
+@import "../../mods/header/header.scss";
+@import "../../mods/form/form.scss";
+@import "../../libs/scss/g_icon.scss";
+@import "../../libs/scss/mixin.scss";
+@import "../../libs/scss/css3-mixin.scss";
+@import "../../exports/common.scss";
+@import "../../mods/dateselect/dateselect.scss";
+
+body{
+    background-color:#fff;
+}
+#container{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    font-size:.5rem ;
+    background-color:#fff;
+}
+#head{
+     background:#fff;
+     font-size:.34rem;
+     border-bottom: 1px solid #d8d8d8;
+     padding: .25rem;
+     text-align: center;
+     font-weight: bold;
+     .m-data-filter{
+       width:1.9rem ;
+       display: inline-block;
+     }
+     .m-filter{
+         color:#0084ff;
+     }
+}
+.m-flex{
+  @include flexbox;
+
+}
+.flex-item{
+    @include flex-item(1);
+   }
+.flex-item4{
+    @include flex-item(4);
+}
+.m-preserved{
+   color:#1787fb ;
+}
+.m-systems{
+    overflow: scroll;
+}
+.m-systemItem{
+    font-size:.28rem;
+    color:#777;
+    width: 7rem;
+    margin: 0 auto;
+    .systemClass{
+        border-bottom:1px solid #ddd;
+        padding: .3rem 0;
+        font-size: .32rem;
+        color: #000;
+        }
+    .systemDetalis{
+          padding:.3rem 0 ;
+
+         span{
+             i{
+               display: inline-block;
+               @include border-radius(3px);
+               width: .35rem;
+               height: .35rem;
+               border: 1px solid #ddd;
+               vertical-align: middle;
+               background:#fff url(../../images/icon/checked-icon.png) center no-repeat;
+               background-size:.2rem auto;
+             }
+             .pickActive{
+                 background-color:#1682fb;
+                 border:1px solid #1682fb ;
+             }
+             em{
+                 vertical-align: middle;
+                 display: inline-block;
+                 margin-left: .15rem;
+             }
+         }
+    }
+}

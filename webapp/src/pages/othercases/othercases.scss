@@ -1,0 +1,151 @@
+@import "../../mods/header/header.scss";
+@import "../../mods/form/form.scss";
+@import "../../libs/scss/g_icon.scss";
+@import "../../libs/scss/mixin.scss";
+@import "../../libs/scss/css3-mixin.scss";
+@import "../../exports/common.scss";
+@import "../../mods/dateselect/dateselect.scss";
+
+body{
+    background-color:#fff;
+}
+#container{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    font-size:.5rem ;
+    background-color:#fff;
+}
+#head{
+     background:#fff;
+     font-size:.34rem;
+     border-bottom: 1px solid #d8d8d8;
+     padding: .25rem;
+     text-align: center;
+     font-weight: bold;
+     .m-data-filter{
+       width:1.9rem ;
+       display: inline-block;
+     }
+     .m-filter{
+         color:#0084ff;
+     }
+}
+.m-flex{
+  @include flexbox;
+
+}
+.flex-item{
+    @include flex-item(1);
+   }
+.flex-item4{
+    @include flex-item(4);
+}
+.m-preserved{
+   color:#1787fb ;
+}
+.fr{
+    float: right;
+}
+.m-caseList{
+    font-size: .32rem;
+    color: #333;
+}
+.m-caseItem{
+    //width: 7rem;
+    //margin: 0 auto;
+    position: relative;
+    p{
+        padding:.3rem .5rem ;
+
+    }
+    .m-select{
+        background-color:#efefef;
+        input{
+            width:1.22rem ;
+            height: .75rem;
+            border: 1px solid #ddd;
+            margin-left: 1.74rem;
+            background-color: #fff;
+            padding-left : 6px;
+
+        }
+        .m-addSub{
+            i{
+                width: .7rem;
+                height: .7rem;
+                color:#fff ;
+                background-color:#d3d3d3 ;
+                text-align: center;
+                display: inline-block;
+                line-height: .58rem;
+                @include border-radius(.7rem);
+                font-size: .68rem;
+                margin-left: .38rem;
+            }
+        }
+        .m-unit{
+            margin: 0 .2rem;
+            i{
+                margin:0 .1rem ;
+            }
+        }
+    }
+    hr{
+    border: none;
+    position: absolute;
+    width: 7rem;
+    margin: 0;
+    padding: 0;
+    border-bottom: 1px solid #ddd;
+    left: 50%;
+    margin-left: -3.5rem;
+    bottom: 0;
+    }
+
+}
+.m-check{
+    margin-left:.9rem;
+    color: #777777;
+    i{
+        border: 1px solid #ddd;
+        display : inline-block;
+        width: 24px;
+        height: 24px;
+        @include border-radius(24px);
+        text-align: center;
+       line-height: .45rem;
+       margin-right: .2rem;
+       em{
+           display: inline-block;
+           width:10px;
+           height: 10px;
+           @include border-radius(10px);
+           vertical-align : 1px;
+           //background-color:#fbc02f;
+       }
+    }
+}
+.m-checked{
+     margin-left:.9rem;
+    color: #777777;
+    i{
+        border: 1px solid #ddd;
+        width:.45rem;
+        height:.45rem;
+        @include border-radius(30px);
+        display:inline-block;
+        text-align: center;
+       line-height: .45rem;
+       margin-right: .2rem;
+       em{
+           display: inline-block;
+           width:.2rem ;
+           height: .2rem;
+           @include border-radius(10px);
+           background-color:#fbc02f;
+       }
+    }
+
+}

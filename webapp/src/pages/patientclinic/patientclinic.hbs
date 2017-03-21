@@ -1,0 +1,16 @@
+<header class="yo-header m-header">
+    <h2 class="title">我的诊所</h2>
+</header>
+<div class="flex g-main">
+{{#each data}}
+<div class="m-clinicItem js-clinicDetail" data-val="{{jg_id}}">
+	 <p>{{mc}}</p>
+	 <p><img src="{{yyzz}}" alt="诊所照片"></p>
+	 <p class="m-clinicBottom"><span>机构地址:</span><span>{{dz}}</span></p>
+	 <p class="m-clinicBottom"><span>添加时间:</span><span>{{#formateTime gzsj}}{{/formateTime}}</p>
+</div>
+{{/each}}
+{{#unless data}}
+   <p class="no-data">暂无诊所</p>
+{{/unless}}
+</div>

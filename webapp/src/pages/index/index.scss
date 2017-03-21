@@ -1,0 +1,92 @@
+@import "../../mods/header/header.scss";
+@import "../../libs/scss/g_icon.scss";
+@import "../../libs/scss/css3-mixin.scss";
+@import "../../libs/scss/_flex.scss";
+@import "../../mods/flexthumb/flexthumb.scss";
+
+.user-block {
+    font-size: .26rem;
+    color: #777;
+    padding: .19rem .3rem;
+    line-height: .72rem;
+    border-bottom: 1px solid #d8d8d8;
+    img {
+        float: left;
+        width: .72rem;
+        height: .72rem;
+        margin-right: .22rem;
+        @include border-radius(50%);
+    }
+}
+
+.order-block {
+    padding: .2rem 0;
+    font-size: .28rem;
+    @include inline-flex;
+    @include flex-direction(row);
+    a.flex-col {
+        @include inline-flex;
+        @include flex-direction(column);
+        border-right: 1px solid #d8d8d8;
+        text-align: center;
+        width: 50%;
+        .icon {
+            margin-top: .49rem;
+            margin-left: 1.5rem;
+            margin-bottom: .5rem;
+        }
+    }
+    .flex-col {
+        text-align: center;
+        width: 50%;
+        a {
+            padding: .55rem 0;
+            @include inline-flex;
+            @include flex-direction(row);
+            width: 100%;
+            &:first-child {
+                border-bottom: 1px solid #d8d8d8;
+            }
+        }
+        .icon {
+            margin-left: .97rem;
+            margin-right: .24rem;
+        }
+    }
+}
+.m-thumb-wrapper {
+    .thumb-flex {
+        padding: .8rem 0;
+        .thumb-flex-item {
+            .main-text {
+                color: #333;
+                line-height: .7rem;
+                margin-bottom: .3rem;
+                span {
+                    font-size: .7rem;
+                    color: #007eff;
+                }
+            }
+        }
+
+
+    }
+    .thumb-block {
+        padding: .88rem 0;
+        margin: 0 .26rem;
+        .main-text {
+            font-size: .72rem;
+            color: #fe8246;
+            line-height: .72rem;
+            margin-bottom: .3rem;
+        }
+        .text {
+            color: #777;
+            margin-bottom: .26rem;
+        }
+    }
+}
+.qiehuan{
+    margin-left: .5rem;
+    font-size: .3rem;
+}

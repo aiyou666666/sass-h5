@@ -1,0 +1,24 @@
+<header class="yo-header m-header">
+        <h2 class="title">预约提醒</h2>
+        <a class="regret yo-ico js-back" href="#"></a>
+</header>
+<div class="m-notice-block">
+  <p class="m-NoticeTip">{{title}}</p>
+  <div class="m-notice-info">
+    <p class="m-Noticetitle">预约明细</p>
+    <p>预约时间:{{itemTime}}</p>
+    <p>预约医院:{{jgmc}}</p>
+    <div class="m-flex">
+	     <div class="flex-item">
+	      <p>预约项目:</p>
+	     </div>
+		     <div class="flex-item2">
+		          <p><span class="ml-small">{{item}}</span></p>
+		    </div>
+	    </div>
+        <p>预约医生:<span class="ml-small">{{ysmc}}</span></p>
+        <img src="//static1.medlinker.net/sass-h5/webapp/images/book-bg.png" alt="" class="m-bookBg" />	 
+  </div>
+   <p class="center m-NoticeMsg">{{ remark }}</p>
+  </div> 
+  <div class="m-bottom-fixBtn"><a href="tel:{{jgdh}}">联系机构</a></div>	

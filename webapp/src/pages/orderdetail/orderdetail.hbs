@@ -1,0 +1,82 @@
+<header class="yo-header m-header">
+            <h2 class="title">预约详情</h2>
+            <a class="regret yo-ico js-back" href="calendar.html"><span class="icon icon-arrow-left-blue"></span></a>
+            <a class="js-submit affirm js-editorder">编辑</a>
+        </header>
+        <div class="m-med-form flex g-main">
+            <div class="form-block">
+                <input type="hidden" name="doctor-id" value=""/>
+                <input type="hidden" name="patient-id" value=""/>
+                <div class="form-col g-clear">
+                    <div class="item-title label">患者姓名</div>
+                    <a class="item-input js-getPatient" href="javascript:;">
+                        <span class="icon icon-arrow-right-gray"></span>
+                        <input type="text" name="name" class="patientName" value="{{patientName}}" required="required" readonly/>
+                    </a>
+                </div>
+                <div class="form-col g-clear">
+                    <div class="item-title label">患者手机号</div>
+                    <div class="item-input">
+                        <span class="icon icon-arrow-right-gray"></span>
+                        <input type="tel" name="phone" class="patientPhone" value="{{patientMobile}}" readonly/>
+                    </div>
+                </div>
+                <div class="form-col g-clear">
+                    <div class="item-title label">患者性别</div>
+                    <div class="item-input js-sex">
+                        <span class="icon icon-arrow-right-gray"></span>
+                        <span class="sexVal">{{patientGender}}</span>
+                    </div>
+                </div>
+                <div class="form-col g-clear last">
+                    <div class="item-title label">患者年龄</div>
+                    <div class="item-input js-patientAge">
+                        <span class="icon icon-arrow-right-gray"></span>
+                        <span class="ageVal">{{patientAge}}</span>
+                    </div>
+                </div>
+
+            </div>
+                <div class="form-col g-clear">
+                    <div class="item-title label">预约医生</div>
+                    <div class="item-input">
+                        <span class="icon icon-arrow-right-gray"></span>
+                        <input type="text" name="doctor-name" value="{{doctorName}}" class="doctorName" required="required" readonly/>
+                    </div>
+                </div>
+                <div class="form-col g-clear">
+                    <div class="item-title label">预约日期</div>
+                    <div class="item-input js-yuyuetime">
+                        <span class="icon icon-arrow-right-gray"></span>
+                        <input type="text" name="yuyueDate" value="{{apptDate}}" id="yuyueDate" required="required" readonly/>
+                    </div>
+                </div>
+                <div class="form-col g-clear">
+                    <div class="item-title label">预约时间</div>
+                    <div class="item-input">
+                        <span class="icon icon-arrow-right-gray"></span>
+                        <input type="text" name="showTime" id="showTime" value="{{apptTime}}">
+                        <input type="time" name="yuyuetime" id="yuyueTime" value="{{apptTime}}" required="required" readonly/>
+                    </div>
+                </div>
+                <div class="form-col g-clear">
+                    <div class="item-title label">预约时长</div>
+                    <div class="item-input js-timeRange">
+                        <span class="icon icon-arrow-right-gray"></span>
+                        <span  class="timeRangeVal" data-val="{{durationKey}}" >{{duration}}</span>
+                    </div>
+                </div>
+                <div class="form-col g-clear last">
+                    <div class="item-title label">预约事项</div>
+                    <div class="item-input hidden">
+                        <select name="item" id="yuyue" required="required"></select>
+                    </div>
+                    <ul class="matter-list">
+                    {{#each itemsMap}}
+                    <li>
+                      <span class="del-item fl"><i></i></span> <span class="item-val fr" data-val={{#getobjKey this}}{{/getobjKey}}>{{#getobjVal this}}{{/getobjVal}}</span>
+                     </li> 
+                    {{/each}}
+                    </ul>
+                </div>
+        </div>

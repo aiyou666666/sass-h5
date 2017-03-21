@@ -1,0 +1,63 @@
+@import '../../libs/yo/usage/core/gdeps.scss';
+@import "../../libs/yo/lib/fragment/yo-header";
+@include yo-header($height: 1rem, $bgcolor: #fff,$font-size: .36rem,$color: #000){
+    border-bottom: 1px solid #d8d8d8;
+    > .regret {
+        padding: 0;
+        left: .26rem;
+        .icon {
+            display: block;
+            margin-top: .27rem;
+        }
+    }
+    > .affirm {
+        color: #007eff;
+        font-size: .36rem;
+        right: .26rem;
+        width: auto;
+        text-align: right;
+        padding: 0;
+    }
+    &::after{
+        content:" ";
+        border:none;
+    }
+};
+// .g {
+//     border-bottom: 1px solid #d8d8d8;
+//     position: fixed;
+//     top: 0;
+//     background: #fff;
+//     width: 100%;
+//     font-size: .36rem;
+//     line-height: 1rem;
+//     padding: 0 .26rem;
+//     @include inline-flex;
+//     @include flex-direction(row);
+//     .return-back {
+//         width: 20%;
+//         .icon {
+//             display: block;
+//             margin-top: .27rem;
+//         }
+//     }
+//     h1 {
+//         height: 1rem;
+//         text-align: center;
+//         font-weight: normal;
+//         color: #000;
+//         text-align: center;
+//         width: 60%;
+//     }
+//     .fr {
+//         color: #007eff;
+//         text-align: right;
+//         width: 20%;
+//     }
+//     &.no-back {
+//         h1 {
+//             width: 100%;
+//             margin: 0;
+//         }
+//     }
+// }

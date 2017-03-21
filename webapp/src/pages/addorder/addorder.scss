@@ -1,0 +1,69 @@
+@import "../../mods/header/header.scss";
+@import "../../mods/form/form.scss";
+@import "../../libs/scss/g_icon.scss";
+@import "../../libs/scss/css3-mixin.scss";
+@import "../../exports/common.scss";
+@import "../../mods/dateselect/dateselect.scss";
+@include yo-select() {
+    > .unit {
+        display: block;
+    }
+};
+.yuyueType{
+    min-width: 3rem;
+    height: 1rem;
+    text-align: right;
+}
+.m-med-form .item-input {
+    min-width: 1.2rem;
+    min-height: 1rem;
+    text-align: right;
+    position: relative;
+      .noticeMsg{
+           margin-right:.1rem ;
+      }
+    }
+    .sexVal , .ageVal , .timeRangeVal {
+        margin-right : 15px;
+    }
+    
+.del-item{
+    @include border-radius(30px);
+    width: .5rem;
+    height: .5rem;
+    display: inline-block;
+    background-color: red;
+    color: #fff;
+    position: relative;
+    margin-top: .25rem;
+    i{
+        position: absolute;
+        width: .26rem;
+        height: .06rem;
+        background-color: #fff;
+        left: 50%;
+        top: 50%;
+        margin-top: -.03rem;
+        margin-left: -.13rem;
+        
+    }
+}
+.m-med-form .matter-list li{
+    overflow: hidden;
+}
+#showTime{
+    position: absolute;
+    z-index: 9;
+    top : 10px;
+}
+#yuyueTime{
+    text-align: right;
+    border: none;
+    @include opacity(0) ;
+    z-index: 10;
+    position: relative;
+}
+.yo-header >.js-submit{
+    width:1rem;
+    text-align: center;
+}

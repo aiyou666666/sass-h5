@@ -1,0 +1,101 @@
+@import "../../libs/yo/lib/element/yo-checked";
+@import "../../libs/yo/lib/element/yo-input";
+@import '../../libs/yo/lib/widget/yo-select.scss';
+@import "../../libs/yo/lib/widget/yo-dialog.scss";
+@import "../../libs/yo/lib/widget/yo-mask.scss";
+@import "../../libs/yo/lib/fragment/yo-list.scss";
+@import "../../libs/yo/lib/widget/yo-tip.scss";
+@import "../../libs/yo/lib/element/yo-loading.scss";
+
+
+@include yo-list() {
+    > .item {
+        font-size: .32rem;
+        color: #333;
+        text-align: center;
+        line-height: .75rem;
+    }
+};
+@include yo-mask($name:fixed) {
+    background: fixed!important;
+    width: 100%;
+    height: 100%;
+};
+@include yo-dialog($name:select, $width: 100%, $radius:0) {
+    left: 0 !important;
+    max-width: 100%;
+    font-size: .32rem;
+    padding: 0;
+
+
+    > .hd {
+        height: .8rem;
+        line-height: .8rem;
+        margin: 0 .2rem;
+        border-bottom: 1px solid #d8d8d8;
+        .title {
+            margin: 0;
+        }
+        .regret {
+            color: #777;
+            left: 0;
+        }
+        .affirm {
+            color: #007eff;
+            right: 0;
+        }
+    }
+};
+
+
+@include yo-select($item-height: 38px) {
+    color: #333;
+    font-size: 16px;
+    width: 100%;
+    > .unit {
+        display: none;
+    }
+};
+@include yo-tip(){
+  width:4rem;
+  height:.7rem ;
+  line-height:.7rem ;
+}
+@include yo-loading($bgcolor:rgba(0,0,0,.5), $ico-size:.6rem,$ico-color:rgba(255,255,255,.8))
+.yo-loading{
+    > .inner {
+        padding: .35rem .4rem;
+        border-radius: .1rem;
+         > .yo-ico {
+            &:not(:only-child) {
+                margin-bottom:0;
+            }
+        }
+     }
+}
+
+
+//弹出框
+@include yo-dialog($name:confirm) {
+     @include border-radius(.3rem);
+    >.bd{
+        font-size: .36rem;
+        padding: .8rem 1rem!important;
+    }
+   >.ft{
+       width: 95%;
+       margin: 0 auto;
+      .yo-btn-dialog{
+           color:#777777;
+           padding: .25rem 0;
+           font-size: .36rem;
+      }
+      .yo-btn-l{
+          height: .9rem;
+      }
+      .yo-btn-dialog:first-child{
+          color:#007eff;
+      }
+
+   }
+}

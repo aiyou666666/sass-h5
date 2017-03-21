@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+        <meta name="format-detection" content="telephone=no"/>
+        <meta name="format-detection" content="email=no"/>
+        <title>medlinker</title>
+        <script type="text/javascript" src="//static1.medlinker.net/sass-h5/webapp/src/exports/rem.js"></script>
+        <link rel="stylesheet" href="//static1.medlinker.net/sass-h5/webapp/src/exports/common.css" type="text/css">
+        <link rel="stylesheet" href="//static1.medlinker.net/sass-h5/webapp/src/exports/calendar.css" type="text/css">
+    </head>
+    <body>
+        <div class="wrapper">
+            <header class="yo-header m-header">
+                <h2 class="title">预约管理</h2>
+                <a class="regret yo-ico" href="index.html"><span class="icon icon-arrow-left-blue"></span></a>
+            </header>
+        <div class="calendar-wrapper">
+            <script id="calendar-tmpl" type="text/x-handlebars-template">
+
+                <div class="title-bar g-clear">
+                    <p class="name"></p>
+                    <div>
+                        <span class="icon icon-arrow-left-border"></span>
+                        <p class="date"><%= data.year %>.<%= data.month %></p>
+                        <span class="icon icon-arrow-right-border"></span>
+                    </div>
+                    <div>
+                        <a class="icon-calendar icon" href="javascript:;"></a>
+                        <a class="today" href="javascript:;">今天</a>
+                    </div>
+                </div>
+                <div id="calendar">
+                    <ul class="g-clear week-wrapper">
+                        <li class="week">日</li>
+                        <li class="week">一</li>
+                        <li class="week">二</li>
+                        <li class="week">三</li>
+                        <li class="week">四</li>
+                        <li class="week">五</li>
+                        <li class="week">六</li>
+                    </ul>
+                    <ul class="g-clear date-wrapper">
+                    <%
+                        var i = 0;
+                        _.times(data.blank, function(n){
+                        i ++ ;
+                    %>
+                        <li class="data blank"></li>
+
+                    <%
+
+                        })
+                    %>
+                    <%
+                       _.times(data.days, function(n){
+                        i ++ ;
+                        var temp = (n + 1) < 10 ? "0" + (n + 1) : (n + 1);
+                        if (data.today == n+1) {
+
+                    %>
+                        <li class="data today-light" data-value="<%= data.year %><%= data.month %><%= temp %>">
+                        <%  } else {  %>
+                        <li class="data" data-value="<%= data.year %><%= data.month %><%= temp %>">
+                        <% } %>
+                        <%
+                           _(data.scheduleList).forEach(function(n) {
+                                var t = data.year + '-' + data.month + '-' + temp ;
+                                if (n == t ) {  %>
+                                <span class="tips"></span>
+                            <%  }
+                            })
+                        %>
+                            <%= n+1 %>
+                        </li>
+                        <%   if (i % 7 == 0) {  %>
+                                </ul>
+                                <ul class="g-clear date-wrapper">
+                        <%   }
+                        })
+                    %>
+                    </ul>
+                </div>
+                </script>
+            </div>
+            <div id="schedule" class="yo-flex">
+                <script id="schedule-tmpl" type="text/x-handlebars-template">
+
+
+                    <div class="time-tab g-clear yo-header">
+                        <p class="tab am active">上午</p>
+                        <div class="border"></div>
+                        <p class="tab pm" >下午</p>
+                    </div>
+                    <div class="schedule-list am">
+                        <%
+                        var i = 2;
+                        var min ;
+                        _(data.hours).forEach(function(n){
+                            n = n < 10 ? "0" + n : n;
+                            _.times(i, function(m){
+                                if (m % 2 == 0) {
+                                    min = '00';
+                                    if (n == 13 && min == '00') {
+                         %>
+                    </div>
+                    <div class="schedule-list pm">
+                        <% } %>
+                        <ul class="g-clear">
+                            <%  if (data.schedule.length == 0) { %>
+                            <li class="timeline no-item" data-value="<%= n %>:<%= min %>"><%= n %><span>00</span></li>
+                            <% } else { %>
+                            <li class="timeline" data-value="<%= n %>:<%= min %>"><%= n %><span>00</span></li>
+                            <% }
+                            _(data.schedule).forEach(function(i) {
+                                if(i.hour == n && (i.min >= min && i.min < 30)) {
+                                    if(i.isTimeOut) {  %>
+                                    <li class="schedule-item focus timeout"  data-value="<%= i.patientId %>" data-id="<%= i.apptId %>">
+                                    <% } else { %>
+                                    <li class="schedule-item focus"  data-value="<%= i.patientId %>" data-id="<%= i.apptId %>" >
+                                    <% } %>
+                                        <span class="tips"></span>
+                                <p class="item g-clear"><span>
+                                    <%  _(i.items).forEach(function(n) {  %>
+                                       <%= n.dictName %>
+                                    <% }) %>
+                                    </span>事项：
+                                </p>
+                                <p><%= i.patientName%>   <%= i.apptTimeBegin%>-<%= i.apptTimeEnd%> </p></li>
+                                <% }
+                                })%>
+
+                        </ul>
+                        <% } else {
+                           min = '30';
+                        %>
+                        <ul class="g-clear">
+                            <% if (data.schedule.length == 0) { %>
+                            <li class="timeline no-item" data-value="<%= n %>:<%= min %>"><span>30</span></li>
+                            <% } else { %>
+                            <li class="timeline" data-value="<%= n %>:<%= min %>"><span>30</span></li>
+                            <% }
+                               _(data.schedule).forEach(function(i) {
+                            if(i.hour == n && (i.min >= min && i.min <= 59)) {
+                                if(i.isTimeOut) {  %>
+                            <li class="schedule-item focus timeout" data-value="<%= i.patientId %>" data-id="<%= i.apptId %>">
+                                <% } else { %>
+                            <li class="schedule-item focus" data-value="<%= i.patientId %>" data-id="<%= i.apptId %>">
+                                <% } %>
+                                <span class="tips"></span>
+                                <p class="item g-clear"><span>
+
+                                    <%  _(i.items).forEach(function(n) {  %>
+                                    <%= n.dictName %>
+                                    <% }) %>
+                                    </span> 事项：
+                                </p>
+                                <p><%= i.patientName%></p>
+                                <p><%= i.apptTimeBegin%>-<%= i.apptTimeEnd%></p></li>
+                            <% }
+                            }) %>
+                        </ul>
+                        <%
+                        }
+                        })
+                        })
+                        %>
+
+                    </div>
+
+                <a class="icon-add icon" href="addorder.html"></a>
+            </script>
+                </div>
+    </div>
+    <script src="http://static0.medlinker.net/zepto/1.1.6/zepto.min.js"></script>
+    <script type="text/javascript" src="//static1.medlinker.net/sass-h5/webapp/src/exports/calendar.js"></script>
+</body>
+</html>

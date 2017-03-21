@@ -1,0 +1,62 @@
+.m-thumb-wrapper {
+    .thumb-bar {
+        font-size: .28rem;
+        margin: 0 .26rem;
+        line-height: .8rem;
+        height: .8rem;
+        border-bottom: 1px solid #d8d8d8;
+        .title {
+            span {
+                color: #777;
+                display: inline;
+            }
+        }
+        .fr {
+            font-size: .26rem;
+            p {
+                display: inline-block;
+                margin-right: .2rem;
+            }
+        }
+    }
+    .thumb-flex {
+        font-size: .26rem;
+        color: #777;
+        @include flexbox;
+        @include flex-direction(row);
+
+        .thumb-flex-item {
+            @include inline-flex;
+            @include flex-direction(column);
+            text-align: center;
+            width: 32.69%;
+            border-right: 1px solid #d8d8d8;
+            &:last-child {
+                border-right: 0;
+            }
+        }
+        &.two-col {
+            .thumb-flex-item {
+                width: 49.2%;
+            }
+        }
+        &.gray {
+            padding: .7rem 0;
+            .thumb-flex-item {
+                span {
+                    font-size: .32rem;
+                    color: #333;
+                    line-height: .32rem;
+                    margin-top: .3rem;
+                }
+            }
+        }
+
+    }
+    .thumb-block {
+        font-size: .26rem;
+        line-height: .26rem;
+        text-align: center;
+        border-bottom: 1px solid #d8d8d8;
+    }
+}

@@ -1,0 +1,118 @@
+<div class="m-med-form">
+    <div class="form-col g-clear">
+        <p class="title">基本信息</p>
+    </div>
+    <div class="form-col g-clear">
+        <div class="item-title label">患者头像 </div>
+        <div class="item-input addPic">
+            <span class="icon icon-arrow-right-gray"></span>
+            <img src="{{avatar}}" alt="" class="avatar" id="uploadAvatar" {{#unless avatar}}style="display:none;"{{/unless}}/>
+            <input type="file" name="avatar" accept="image/*" id="avatar" class="js-avatar needsclick" capture/>
+        </div>
+    </div>
+    <div class="form-col g-clear ">
+        <div class="item-title label">病历号<span>(必填)</span></div>
+        <div class="item-input">
+            <input type="text" class="needsclick" name="mzblh" placeholder="请输入病历号" value="{{mzblh}}" readonly/>
+        </div>
+    </div>
+    <div class="form-col g-clear">
+        <div class="item-title label">患者姓名<span>(必填)</span></div>
+        <div class="item-input">
+            <input type="text" name="xm" class="needsclick" placeholder="请输入姓名" value="{{xm}}" required/>
+        </div>
+    </div>
+    <div class="form-col g-clear">
+        <div class="item-title label">患者性别</div>
+        <div class="item-input js-sex needsclick">
+            <span class="icon icon-arrow-right-gray"></span>
+            {{#if sex}}
+            <input type="text" name="sex" value="{{sex}}" readonly>
+            {{else}}
+            <input type="text" name="sex" value="男" readonly>
+            {{/if}}
+        </div>
+    </div>
+    <div class="form-col g-clear">
+        <div class="item-title label">出生日期</div>
+        <div class="item-input js-date needsclick">
+            <span class="icon icon-arrow-right-gray"></span>
+            <input type="text" name="csrq" class="needsclick" value="{{dateBirth}}" readonly/>
+        </div>
+    </div>
+    <div class="form-col g-clear">
+        <div class="item-title label">联系电话</div>
+        <div class="item-input">
+            <input type="tel" name="sjh" class="needsclick" value="{{sjh}}"/>
+        </div>
+    </div>
+    <div class="form-col g-clear">
+        <div class="item-title label">会员等级</div>
+        <div class="item-input js-grade needsclick">
+            <span class="icon icon-arrow-right-gray"></span>
+            <input type="text" data-val="hydj" name="hydj" value="{{hydjStr}}" readonly/>
+        </div>
+    </div>
+    <div class="form-col g-clear">
+        <div class="item-title label">会员卡号</div>
+        <div class="item-input">
+            <input type="tel" class="needsclick" name="hykh" value="{{hykh}}"/>
+        </div>
+    </div>
+    <div class="form-col g-clear last">
+        <div class="item-title label">联系地址</div>
+        <textarea name="lxdz" cols="30"  class="needsclick" rows="10">{{lxdz}}</textarea>
+    </div>
+
+    <div class="g-border"></div>
+
+    <div class="form-col g-clear">
+        <p class="title">就诊信息</p>
+    </div>
+    <div class="form-col g-clear">
+        <div class="item-title label">患者分类</div>
+        <div class="item-input js-catalag">
+            <span class="icon icon-arrow-right-gray"></span>
+            <input type="text" class="needsclick" data-val="hzfl" name="hzfl" value="{{hzflStr}}" readonly/>
+        </div>
+    </div>
+    <div class="form-col g-clear">
+        <div class="item-title label">患者来源</div>
+        <div class="item-input js-source">
+            <span class="icon icon-arrow-right-gray"></span>
+            <input type="text"  class="needsclick" data-val="hzly"  name="hzly" value="{{hzlyStr}}" readonly/>
+        </div>
+    </div>
+    <div class="form-col g-clear">
+        <div class="item-title label">首诊医生(必选)</div>
+        <div class="item-input js-doctorName">
+            <span class="icon icon-arrow-right-gray"></span>
+            <input type="text" class="needsclick" name="szys" value="{{szysStr}}" data-val="1" readonly datarequired/>
+        </div>
+    </div>
+    <div class="form-col g-clear">
+        <div class="item-title label">咨询师</div>
+        <div class="item-input js-zxs needsclick">
+            <span class="icon icon-arrow-right-gray"></span>
+            <input type="text" name="zxs" value="{{zxsStr}}" data-val="4" readonly/>
+        </div>
+    </div>
+    <div class="form-col g-clear">
+        <div class="item-title label">既往病史</div>
+        <a class="item-input js-past  needsclick" href="javascript:;" data-href="prevhistory.html?id={{hzId}}{{#if jws}}&hasHistory=1{{/if}}">
+            <span class="icon icon-arrow-right-gray"></span>
+            <input type="text" name="jws" value="{{jwsStr}}" readonly/>
+        </a>
+    </div>
+    <div class="form-col g-clear">
+        <div class="item-title label">其他情况</div>
+        <div class="item-input js-othercase needsclick">
+            <span class="icon icon-arrow-right-gray"></span>
+            <input type="text" name="othercase" value="{{other}}" readonly/>
+        </div>
+    </div>
+    <div class="form-col g-clear">
+        <div class="item-title label">过敏史</div>
+        <textarea name="gms"  class="needsclick" cols="30" rows="10" placeholder="请输入过敏史">{{gms}}</textarea>
+    </div>
+</div>

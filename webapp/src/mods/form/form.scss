@@ -1,0 +1,129 @@
+
+.m-med-form {
+    font-size: .28rem;
+    line-height: 1rem;
+    .form-block {
+        border-bottom: .26rem solid #efefef;
+    }
+    .form-col {
+        border-bottom: 1px solid #d8d8d8;
+        margin: 0 .26rem;
+        p.title {
+            font-size: .32rem;
+            font-weight: bold;
+        }
+        textarea {
+            clear: both;
+            width: 100%;
+            height: 2rem;
+            border: 0;
+            font-size: .28rem;
+            color: #7a7a7a;
+            line-height: .48rem;
+            padding: .2rem .3rem;
+            border: 1px solid #d8d8d8;
+        }
+        &:last-child, &.last {
+            border: none;
+        }
+    }
+    .label {
+        float: left;
+        width: 2rem;
+    }
+    .item-input {
+        float: right;
+        color: #777;
+        &.hidden {
+            position: absolute;
+            z-index: 99;
+            right: 0;
+            select {
+                font-size: 0;
+                width: 1rem;
+            }
+        }
+        .avatar {
+            width: .65rem;
+            height: .65rem;
+            position: absolute;
+            right: .22rem;
+            top: .2rem;
+        }
+        &.addPic {
+            position: relative;
+            input {
+                position: relative;
+                z-index: 9;
+            }
+        }
+    }
+    .item-input {
+        height : 50px;
+        line-height: 50px ;
+        position : relative;
+    }
+    input, select, input[type="text"]:focus {
+        height: 30px;
+        line-height: 30px ;
+        padding: 0;
+        border: 0;
+        font-size: 14px;
+        text-align: right;
+        margin-right: 15px;
+        color: #777;
+    }
+    select.item {
+        width: .1rem;
+        position: absolute;
+        right: 0;
+    }
+    input {
+        width: 4rem;
+    }
+    .icon-arrow-right-gray {
+        position : absolute;
+        top: 20px;
+        right : 0px;
+    }
+    .btn-text-right {
+        color: #0084ff;
+        float: right;
+    }
+    .matter-list {
+        clear: both;
+        border-top: 1px solid #d8d8d8;
+        li {
+            border-bottom: 1px solid #d8d8d8;
+            color: #7a7a7a;
+            text-align: right;
+        }
+
+
+    }
+
+    .form-btn-wrapper {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        z-index: 99;
+        border-top: 1px solid #d8d8d8;
+        background: #fff;
+        .btn {
+          display: inline-block;
+          font-size: 32px;
+          color: #3480f6;
+          line-height: .76rem;
+          height: .76rem;
+          width: 3.69rem;
+          text-align: center;
+          &.submit {
+            border-right: 1px solid #d8d8d8;
+          }
+        }
+    }
+}
+.icon-delete {
+  float: left;
+  margin-top: 30px;
+}

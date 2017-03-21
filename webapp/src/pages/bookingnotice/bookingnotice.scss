@@ -1,0 +1,111 @@
+@import "../../mods/header/header.scss";
+@import "../../mods/form/form.scss";
+@import "../../libs/scss/g_icon.scss";
+@import "../../libs/scss/mixin.scss";
+@import "../../libs/scss/css3-mixin.scss";
+@import "../../exports/common.scss";
+@import "../../mods/dateselect/dateselect.scss";
+
+body{
+    background-color:#efefef;
+}
+#container{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    font-size:.5rem ;
+    background-color:#efefef;
+}
+#head{
+     background:#fff;
+     font-size:.34rem;
+     border-bottom: 1px solid #d8d8d8;
+     padding: .25rem;
+     text-align: center;
+     .m-data-filter{
+       width:1.9rem ;
+       display: inline-block;
+     }
+     .m-filter{
+         color:#0084ff;
+     }
+}
+.center{
+    text-align: center;
+}
+.m-notice-block{
+    font-size: .26rem;
+    padding-bottom: 1rem;
+    -webkit-overflow-scrolling:touch;
+    overflow-y: scroll;
+    .m-NoticeTip{
+       width: 7rem;
+       margin: 0 auto;
+       padding:.25rem 0 ;
+    }
+   
+}
+.m-flex{
+  @include flexbox;
+   
+}
+.flex-item{
+    @include flex-item(1);
+   } 
+.flex-item2{
+    @include flex-item(4);
+}
+.m-notice-info{
+    background-color:#fff;
+    width:7rem ;
+    margin: 0 auto;
+    color:#777777;
+    padding: .5rem;
+    position: relative;
+    .m-Noticetitle{
+        border-bottom: 1px dashed #ddd;
+        padding-bottom: .35rem;
+        margin-bottom: .4rem;
+        background: url(../../images/icon/logo-icon.png) 0 0 no-repeat;
+        background-size: .4rem auto;
+        padding-left: .5rem;
+    }
+    .m-bookBg{
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: -.25rem;
+        width: 7rem;
+    }
+}
+
+.m-bottom-fixBtn{
+    position:fixed;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color:#1682fb;
+    height: 1rem;
+    line-height:1rem ;
+    color:#fff ;
+    text-align: center;
+    font-size: .34rem;
+    a{
+        width: 100%;
+        height: 100%;
+        display: inline-block;
+        color: #fff;
+
+    }
+}
+ .m-NoticeMsg{
+       width: 7rem;
+       margin: 0 auto;
+       padding:.35rem 0 ;
+       color:#b3b3b3 ;
+       font-size: .26rem;
+    }
+ .ml-small{
+     margin-left: .1rem;
+ }   

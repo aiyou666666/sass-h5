@@ -1,0 +1,13 @@
+{{# if isDate}}
+<ul>
+    {{#each items}}
+    <li data-from={{zhzlrqfrom}} data-end="{{zhzlrqend}}">{{mc}}</li>
+    {{/each}}
+</ul>
+{{else}}
+<ul data-value={{type}}>
+    {{#each items}}
+    <li data-value="{{zdbm}}">{{mc}}</li>
+    {{/each}}
+</ul>
+{{/if}}

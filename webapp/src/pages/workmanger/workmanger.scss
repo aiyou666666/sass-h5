@@ -1,0 +1,155 @@
+@import "../../mods/header/header.scss";
+@import "../../mods/form/form.scss";
+@import "../../libs/scss/g_icon.scss";
+@import "../../libs/scss/mixin.scss";
+@import "../../libs/scss/css3-mixin.scss";
+@import "../../exports/common.scss";
+@import "../../mods/dateselect/dateselect.scss";
+
+#container{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    font-size:.5rem ;
+    background-color:#efefef;
+    overflow: scroll;
+    bottom: 0;
+}
+.m-workItemList{
+    position: absolute;
+    left: 0;
+    right: 0;
+    overflow: scroll;
+    bottom: 0;
+    top:1rem ;
+    -webkit-overflow-scrolling:touch;
+}
+#head{
+     background:#fff;
+     font-size:.34rem;
+     border-bottom: 1px solid #d8d8d8;
+     padding: .25rem;
+     text-align: center;
+     .m-data-filter{
+      width:1.9rem ;
+       display: inline-block;
+     }
+     .m-filter{
+         color:#0084ff;
+     }
+}
+.m-tilte-wrap{
+    padding: 1rem 0;
+    font-size: .26rem;
+    .tilte-money{
+       font-size: .72rem;
+     }
+   .title-money-txt{
+       color:#7a7a7a;
+       padding-bottom:.15rem;
+       
+       
+   }
+}
+
+.m-flex-top{
+    border-top:1px solid #d8d8d8;
+}
+.m-flex{
+  @include flexbox;
+    padding: .45rem 0;
+    border-bottom: 1px dashed #d8d8d8;
+    margin: 0 auto;
+    width: 7rem;
+}
+.price{
+    color:#fe8246;
+}
+.flex-item2{
+    @include flex-item(2);
+    position: relative;
+    .m-progress{
+        background:#b2d8ff;
+        width: 100%;
+        height: .1rem;
+        @include border-radius-separate(0,5px,0,5px);
+        display: inherit;
+        position: absolute;
+        top: 50%;
+        margin-top: -.05rem;
+        span{
+                width: 20%;
+                background-color: #007eff;
+                display: inline-block;
+                height: .1rem;
+                @include border-radius-separate(0,5px,0,5px);
+                display: inherit;
+        }
+    }
+}
+.flex-item{
+    @include flex-item(1);
+    flex-direction: column;
+    font-size: .26rem;
+    color: #7a7a7a;
+    text-align: center;
+    @include align-items(center);
+    p{
+        display: block;
+        text-align: center;
+    }
+    .item-money{
+        color:#000;
+    }
+    
+}
+.m-workItem{
+    margin-bottom:.2rem ;
+    background-color:#fff;
+    .center{
+        text-align: center;
+    }
+    h6{
+        font-size: .32rem;
+        padding:.3rem;
+        width: 7rem;
+        margin: 0 auto;
+        border-bottom: 1px solid #d8d8d8;
+        span{
+             display:inline-block;
+        }
+    }
+}
+.m-borderRight{
+    border-right:1px solid #ddd ;
+    
+}
+@include yo-header(){
+    overflow: visible;
+}
+.m-searchItem{
+    background-color: rgba(0, 0, 0, 0.3);
+    position: absolute;
+    top: .85rem;
+    width: 1.3rem;
+    height: 1.2rem;
+    font-size: .28rem;
+    right: .17rem;
+    z-index: 1000;
+    display: none;
+    @include border-radius(3px);
+    .m-item{
+        color:#fff;
+        height: .6rem;
+        line-height: .6rem;
+    }
+   .bottomLine{
+       border-bottom: 1px solid rgba(255,255,255,.5);
+   } 
+}
+@include yo-select() {
+    > .unit {
+        display: block;
+    }
+};

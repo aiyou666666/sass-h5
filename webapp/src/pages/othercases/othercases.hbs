@@ -1,0 +1,24 @@
+<header class="yo-header m-header">
+    <h2 class="title">其他情况</h2>
+    <a class="regret yo-ico js-return" href="#"><span class="icon icon-arrow-left-blue"></span></a>
+    <a class="js-submit affirm " href="#">保存</a>
+</header>
+<div class="m-caseList">
+	<div class="m-caseItem js-check">
+	   <p class="m-case" data-val="sfxy"><span>吸烟情况</span><span class="m-check {{#unless sfxy}}m-checked{{/unless}} fr"><i><em></em></i>否</span><span class="m-check {{#if sfxy}}m-checked{{/if}} fr"><i><em></em></i>是</span></p>
+	   <p class="m-select" {{#unless sfxy}}style="display:none;"{{/unless}}><input type="number" value={{cyl}}><span class="m-unit">支<i>/</i>天</span><span class="m-addSub"><i class="m-add">+</i><i class="m-sub">&minus;</i></span></p>
+	</div>
+    <div class="m-caseItem">
+	   <p class="m-case" data-val="sfyj"><span>月经情况</span><span class="m-check {{#unless sfyj}}m-checked{{/unless}} fr"><i><em></em></i>否</span><span class="m-check {{#if sfyj}}m-checked{{/if}} fr"><i><em></em></i>是</span></p>
+	   <hr/>
+	</div>
+    <div class="m-caseItem">
+	   <p class="m-case" data-val="sfhy"><span>怀孕情况</span><span class="m-check {{#unless sfhy}}m-checked{{/unless}} fr"><i><em></em></i>否</span><span class="m-check {{#if sfhy}}m-checked{{/if}} fr"><i><em></em></i>是</span></p>
+	   <hr/>
+	</div>
+	<div class="m-caseItem">
+	   <p class="m-case" data-val="sfbr"><span>哺乳情况</span><span class="m-check {{#unless sfbr}}m-checked{{/unless}} fr"><i><em></em></i>否</span><span class="m-check {{#if sfbr}}m-checked{{/if}} fr"><i><em></em></i>是</span></p>
+	  <hr/>
+	</div>
+
+</div>

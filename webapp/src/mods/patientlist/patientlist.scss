@@ -1,0 +1,42 @@
+.m-patientInfo{
+    font-size: .32rem;
+    color: #333;
+    .info {
+        font-size: .28rem;
+        line-height: .28rem;
+        margin-top: .2rem;
+        color: #777;
+        span {
+            margin-right: .3rem;
+        }
+    }
+    .fr {
+        color: #b3b3b3;
+        font-size: .28rem;
+    }
+}
+.m-patientItem {
+    margin: 0 auto;
+    border-bottom: 1px solid #d8d8d8;
+    padding: .4rem 0;
+    margin: 0 .26rem;
+}
+
+.m-patientname{
+    color:#000;
+}
+.m-nick{
+    text-align: left;
+    width: .92rem;
+    margin-right: .2rem;
+    img{
+        width:.92rem;
+        height: .92rem;
+    }
+}
+.no-result {
+    color: #b3b3b3;
+    font-size: .3rem;
+    text-align: center;
+    margin-top: 50%;
+}

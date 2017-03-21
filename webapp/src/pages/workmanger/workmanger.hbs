@@ -1,0 +1,73 @@
+<header class="yo-header m-header">
+            <h2 class="title"><span class="m-detailTime">{{currData}}</span></h2>
+            <a class="regret yo-ico" href="index.html"><span class="icon icon-arrow-left-blue"></span></a>
+            <a class="js-submit affirm js-timeSearch " href="#">{{currMethd}}</a>
+            <div class="m-searchItem">
+              <div class="m-item bottomLine">按年</div>
+              <div class="m-item">按日期</div>
+            </div>  
+</header>
+<div class="m-workItemList">
+ <div class="m-workItem">
+   <div class="m-tilte-wrap">
+       <p class="center"><span class="price tilte-money">{{ssje}}</span></p>
+	   <p class="center"><span class="title-money-txt">实收金额(元)</span></p>
+	   <p class="center"><span>应收合计:{{ysze}}</span></p>
+   </div> 
+   <div class="m-flex m-flex-top">
+      <div class="flex-item m-borderRight">
+         <p><span>社保卡</span></p>
+         <p><span>(元)</span></p>
+         <p><span class="item-money">{{sbk}}</span></p>
+      </div>
+      <div class="flex-item m-borderRight">
+         <p><span>预交款扣钱</span></p>
+         <p><span>(元)</span></p>
+         <p><span class="item-money">{{yjj}}</span></p>
+     </div>
+     <div class="flex-item">
+        <p><span>其他</span></p>
+        <p><span>(元)</span></p>
+        <p><span class="item-money">{{qt}}</span></p>
+     </div>
+  </div>
+ </div>
+ <div class="m-workItem">
+   <h6><span>(初/复)诊人次</span><span class="fr">({{czrc}}/{{fzrc}})</span></h6>
+  <div class="m-flex">
+     <div class="flex-item"><span>预约率</span></div>
+     <div class="flex-item2"><p class="m-progress"><span style="width:{{yyl}}%"></span></p></div>
+     <div class="flex-item"><span>{{yyl}}%</span></div> 
+  </div>
+  <div class="m-flex">
+     <div class="flex-item"><span>初诊率</span></div>
+     <div class="flex-item2"><p class="m-progress"><span style="width:{{czl}}%"></span></p></div>
+     <div class="flex-item"><span>{{czl}}%</span></div> 
+  </div>
+  <div class="m-flex">
+     <div class="flex-item"><span>回访率</span></div>
+     <div class="flex-item2"><p class="m-progress"><span style="width:{{hfl}}%"></span></p></div>
+     <div class="flex-item"><span>{{hfl}}%</span></div> 
+  </div>
+ </div>
+ <div class="m-workItem">
+   <h6><span>医生统计</span><span class="fr">共{{doctor.length}}名医生有收款</span></h6>
+    {{#each doctor}}
+	   <div class="m-flex">
+	     <div class="flex-item"><span>{{this.name}}</span></div>
+	     <div class="flex-item"><span>实收金额</span></div>
+	     <div class="flex-item"><span class="price">{{this.ss}}</span></div> 
+	  </div>
+    {{/each}}
+ </div>
+ <div class="m-workItem">
+   <h6><span>项目统计</span><span class="fr">共{{chargeItem.length}}项</span></h6>
+    {{#each chargeItem}}
+	    <div class="m-flex">
+	     <div class="flex-item"><span>{{this.item}}</span></div>
+	     <div class="flex-item"><span>应收金额</span></div>
+	     <div class="flex-item"><span class="price">{{this.fyje}}</span></div> 
+	    </div>
+    {{/each}}
+ </div>
+</div> 

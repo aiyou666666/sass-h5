@@ -1,0 +1,217 @@
+@import "../../mods/header/header.scss";
+@import "../../libs/scss/g_icon.scss";
+@import "../../libs/scss/mixin.scss";
+@import "../../libs/scss/css3-mixin.scss";
+@import "../../libs/yo/lib/widget/yo-tip.scss";
+
+@include yo-tip(){
+  width:4rem;
+  height:.7rem ;
+  line-height:.7rem ;
+}
+
+.wrapper {
+    width: 100%;
+    position: relative;
+}
+.title-bar {
+    text-align: center;
+    margin-bottom: .25rem;
+    padding: 0 .2rem;
+    font-size: .30rem;
+    line-height: 1rem;
+    height: 1rem;
+    color: #57617a;
+    position: relative;
+    z-index: 9;
+    background-color: #fff;
+    p {
+        float: left;
+        &.name {
+            color: #0084ff;
+            width: 2.3rem;
+            overflow: hidden;
+            height: 1rem;
+            text-align: left;
+        }
+    }
+    span {
+        margin-top: .26rem;
+        float: left;
+    }
+    .date {
+        margin: 0 .2rem;
+    }
+    .icon-calendar, .today {
+        float: right;
+        color: #0084ff;
+    }
+    .icon-calendar {
+        margin-top: .28rem;
+        margin-left: .3rem;
+    }
+}
+
+#calendar {
+    width: 100%;
+    font-size: .34rem;
+    color: #a5acbd;
+    li {
+        position: relative;
+        float: left;
+        width: .70rem;
+        height: .70rem;
+        text-align: center;
+        line-height: .70rem;
+        margin: .2rem .16rem;
+        &.today-light {
+          background: #0084ff;
+          border-radius: .4rem;
+          color: #fff;
+        }
+        .tips {
+          background: #0084ff;
+          display: inline-block;
+          width: .12rem;
+          height: .12rem;
+          border-radius: 50%;
+          position: absolute;
+          left: .3rem;
+          bottom: -.2rem;
+          top: auto;
+          z-index: 1;
+
+        }
+        &.week {
+            margin: 0 .16rem;
+        }
+    }
+}
+.time-tab {
+    border-top: 1px solid #dae3e9;
+    border-bottom: 1px solid #dae3e9;
+    padding: 0 .3rem;
+    margin-top: .15rem;
+    .tab {
+        display: inline-block;
+        width: 3.1rem;
+        text-align: center;
+        font-size: .3rem;
+         color: #393939;
+        line-height: .98rem;
+        height: .98rem;
+        float: left;
+        &.active {
+            border-bottom: 5px solid #0084ff;
+        }
+    }
+
+    .border {
+        width: 1px;
+        height: .98rem;
+        display: inline-block;
+        margin: 0 .29rem;
+        background-color: #dae3e9;
+        float: left;
+        border-bottom: 5px solid #dae3e9;
+    }
+}
+#schedule {
+    display: none;
+    ul {
+        border-bottom: 1px solid #dae3e9;
+    }
+    li {
+        float: left;
+        &.timeline {
+            width: 1.22rem;
+            color: #6e778e;
+            font-size: .34rem;
+            line-height: 1rem;
+            height: 1.14rem;
+            text-align: right;
+            padding-right: .2rem;
+            span {
+                font-size: .26rem;
+                margin-left: .18rem;
+                text-align: right;
+            }
+        }
+        &.no-item {
+            border-right: 1px solid #dae3e9;
+            width: 1.24rem;
+        }
+        &.schedule-item {
+            min-height: .74rem;
+            border-left: 1px solid #dae3e9;
+            padding-left: .16rem;
+            padding-left: .22rem;
+            float: right;
+            width: 6.28rem;
+        }
+    }
+}
+.schedule-list {
+
+    overflow-y: auto;
+    .schedule-item {
+        padding: .2rem 0;
+        position: relative;
+        p {
+            font-size: .24rem;
+            color: #6e778e;
+            margin-left: .4rem;
+            margin-top: .1rem;
+            width: 5.5rem;
+            &.item {
+              font-size: .3rem;
+                span {
+                    float: right;
+                    width: 4.53rem;
+                }
+            }
+        }
+        &.focus {
+            .tips {
+
+                background: #ffcc00;
+            }
+        }
+        &.timeout {
+            text-decoration: line-through;
+            color: #bfc2cb;
+            .tips {
+                background: #bfc2cb;
+            }
+            p {
+               color: #bfc2cb;
+            }
+        }
+        .tips {
+            display: block;
+            width: .12rem;
+            height: .12rem;
+            border-radius: 50%x;
+            position: absolute;
+            left: .25rem;
+            top: .38rem;
+        }
+    }
+}
+.icon-add {
+    position: absolute;
+    right: 26px;
+    bottom: 46px;
+    z-index: 99;
+}
+.quit {
+    display: none;
+    position: absolute;
+    left: 10px;
+    top: 0;
+    background: url('../images/quit.png') no-repeat 0 0;
+    font-size: 30px;
+    line-height: 32px;
+    color: #fff;
+    padding: 28px 18px 20px 17px;
+}

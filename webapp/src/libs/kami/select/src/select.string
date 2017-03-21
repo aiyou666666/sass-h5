@@ -1,0 +1,10 @@
+<div class="{{uiClass}} yo-select {{extraClass}}">
+	<span class="mask" data-role="mask"></span>
+    {{#each list as section}}
+    <ul class="{{itemClass}} list" data-role="item">
+    </ul>
+    {{#if section.tag}}
+    <span class="{{tagClass}} unit">{{section.tag}}</span>
+    {{/if}}
+    {{/each}}
+</div>

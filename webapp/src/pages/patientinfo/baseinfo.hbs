@@ -1,0 +1,99 @@
+<div class="m-thumb-wrapper">
+    <div class="thumb-flex gray two-col">
+        <div class="thumb-flex-item">
+            <img src="{{avatar}}" alt="" class="avatar"/>
+            <p>{{name}}</p>
+            <p class="info">{{sex}}   {{age}}岁</p>
+            <p class="info">病例号：{{mzblh}}</p>
+        </div>
+        <div class="thumb-flex-item">
+            <img src="{{qrcode}}" alt="" class="qrcode"/>
+            <p>微信扫一扫</p>
+        </div>
+    </div>
+    <div class="border-bg"></div>
+</div>
+
+<div class="m-med-form">
+    <div class="form-col g-clear">
+        <p class="title">基本信息</p>
+    </div>
+    <div class="form-col g-clear">
+        <div class="item-title label">出生日期</div>
+        <div class="item-input">
+            <p>{{dateBirth}}<p/>
+        </div>
+    </div>
+    <div class="form-col g-clear">
+        <div class="item-title label">联系电话</div>
+        <div class="item-input">
+            <p>{{sjh}}<p/>
+        </div>
+    </div>
+    <div class="form-col g-clear">
+        <div class="item-title label">会员等级</div>
+        <div class="item-input">
+            <p>{{hydjStr}}</p>
+        </div>
+    </div>
+    <div class="form-col g-clear">
+        <div class="item-title label">会员卡号</div>
+        <div class="item-input">
+            <p>{{hykh}}</p>
+        </div>
+    </div>
+    <div class="form-col g-clear last">
+        <div class="item-title label">联系地址</div>
+        <textarea name="adress" cols="30" rows="10" readonly="">{{lxdz}}</textarea>
+    </div>
+
+    <div class="g-border"></div>
+
+    <div class="form-col g-clear">
+        <p class="title">就诊信息</p>
+    </div>
+    <div class="form-col g-clear">
+        <div class="item-title label">患者分类</div>
+        <div class="item-input">
+            <p>{{hzflStr}}</p>
+        </div>
+    </div>
+    <div class="form-col g-clear">
+        <div class="item-title label">患者来源</div>
+        <div class="item-input">
+            <p>{{hzlyStr}}</p>
+        </div>
+    </div>
+    <div class="form-col g-clear">
+        <div class="item-title label">首诊医生</div>
+        <div class="item-input">
+            <p>{{szysStr}}</p>
+        </div>
+    </div>
+    <div class="form-col g-clear">
+        <div class="item-title label">咨询师</div>
+        <div class="item-input">
+            <p>{{zxsStr}}</p>
+        </div>
+    </div>
+    <div class="form-col g-clear">
+        <div class="item-title label">上次就诊医生</div>
+        <div class="item-input">
+            <p>{{zhzlysStr}}</p>
+        </div>
+    </div>
+    <div class="form-col g-clear">
+        <div class="item-title label">上次就诊时间</div>
+        <div class="item-input">
+            <p>{{zhzlrq}}</p>
+        </div>
+    </div>
+    <div class="form-col g-clear">
+        <div class="item-title label">既往病史</div>
+        <textarea name="booking-remark" cols="30" rows="10" readonly>{{jws}}</textarea>
+    </div>
+    <div class="form-col g-clear">
+        <div class="item-title label">过敏史</div>
+        <textarea name="gms" cols="30" rows="10" readonly>{{gms}}</textarea>
+    </div>
+</div>

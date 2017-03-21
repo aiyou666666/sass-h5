@@ -1,0 +1,55 @@
+@import "../../mods/header/header.scss";
+@import "../../mods/form/form.scss";
+@import "../../libs/scss/g_icon.scss";
+@import "../../libs/scss/mixin.scss";
+@import "../../libs/scss/css3-mixin.scss";
+@import "../../exports/common.scss";
+@import "../../mods/dateselect/dateselect.scss";
+@import "../patientinfo/patientinfo.scss";
+
+.user-block {
+    padding: .4rem .34rem .4rem .26rem;
+    font-size: .28rem;
+    line-height: .3rem;
+    color: #777;
+    border-bottom: 1px solid #d8d8d8;
+    img {
+        width: .9rem;
+        height: .9rem;
+        border-radius: 50%;
+        margin-right: .14rem;
+        float: left;
+    }
+    p.name {
+        font-size: .32rem;
+        line-height: .38rem;
+        margin-bottom: .22rem;
+        color: #333
+    }
+    .fl {
+        width: 70%;
+    }
+    .fr {
+        margin-top: .2rem;
+    }
+}
+.m-thumb-wrapper .thumb-flex.gray {
+    border: 0;
+}
+.m-med-form .item-input {
+    min-width: 4rem;
+    min-height: 1rem;
+    text-align: right;
+    .currVal{
+        margin-right: 15px;
+    }
+  }
+  .m-med-form input, .m-med-form select{
+      line-height: 20px;
+  }
+.yo-select > .list > .item{
+    text-align: center;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow:hidden;
+}

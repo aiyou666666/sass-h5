@@ -1,0 +1,23 @@
+{
+  "name": "sass-h5",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "medgit@gitlab.dev.okapp.cc:medlinker/sass-h5.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "handlebars": "^4.0.5",
+    "hbsfy": "^2.7.0"
+  },
+  "dependencies": {
+    "lodash": "^4.13.1",
+    "stringify": "^5.1.0"
+  }
+}

@@ -1,0 +1,160 @@
+      <header class="yo-header m-header">
+            <h2 class="title">{{title}}</h2>
+            <a class="regret yo-ico" href="index.html"><span class="icon icon-arrow-left-blue"></span></a>
+            <a class="js-submit affirm js-addcharge " href="#">保存</a>
+        </header>
+        <div class="flex g-main">
+            <div class="user-block g-clear">
+                <div class="fl">
+                    <img class="avatar" src="{{avatar}}" alt="" width=""/>
+                    <p class="name"><span>{{xm}}</span></p>
+                    <p><span>{{xb}}</span> <span>{{age}}岁</span></p>
+                </div>
+                <div class="fr">
+                  {{#if sjh}}<a class="icon icon-phone" href="tel:{{sjh}}"></a>{{/if}}
+                </div>
+            </div>
+            <div class="m-thumb-wrapper">
+                <div class="thumb-flex gray">
+                    <div class="thumb-flex-item">
+                        <p>账户余额</p>
+                        <p>（元）</p>
+                        <span>{{zhye}}</span>
+                    </div>
+                    <div class="thumb-flex-item">
+                        <p>消费总额</p>
+                        <p>（元）</p>
+                        <span>{{xfze}}</span>
+                    </div>
+                    <div class="thumb-flex-item">
+                        <p>欠费金额</p>
+                        <p>（元）</p>
+                        <span class="qianfeiVal">{{qfje}}</span>
+                    </div>
+                </div>
+            </div>
+      <div class="g-border"></div>
+            <div class="m-med-form">
+                <div class="form-col g-clear">
+                    <p class="title">相关人员</p>
+                </div>
+                <div class="form-col g-clear">
+                    <div class="item-title label">医生</div>
+                    <div class="item-input js-getPosUser" data-val="1">
+                        <span class="icon icon-arrow-right-gray"></span>
+                         <span class="doctorVal currVal">{{ys}}</span>
+                    </div>
+                </div>
+                <div class="form-col g-clear">
+                    <div class="item-title label" >护士</div>
+                    <div class="item-input js-getPosUser" data-val="2">
+                        <span class="icon icon-arrow-right-gray"></span>
+                        <span class="nurseVal currVal">{{hs}}</span>
+                    </div>
+                </div>
+                <div class="form-col g-clear last">
+                    <div class="item-title label" >助理</div>
+                    <div class="item-input js-getPosUser" data-val="3">
+                        <span class="icon icon-arrow-right-gray"></span>
+                        <span class="assisVal currVal">{{zl}}</span>
+                    </div>
+                </div>
+
+                <div class="g-border"></div>
+
+                <div class="form-col g-clear jianlvShoufei" data-id="{{id}}">
+                    <p class="title">收费项目</p>
+                </div>
+                <div class="form-col g-clear">
+                    <div class="item-title label">综合收费</div>
+                    <div class="item-input">
+
+                        <input type="number"    name="synPrice" class="synPrice inputMoney" placeholder="请填写金额" value="{{zhsf}}"/>
+                    </div>
+                </div>
+                <div class="form-col g-clear">
+                    <div class="item-title label">口内治疗</div>
+                    <div class="item-input">
+
+                        <input type="number"   name="kouneiPrice" class="kouneiPrice inputMoney" placeholder="请填写金额" value="{{knzl}}"/>
+                    </div>
+                </div>
+                <div class="form-col g-clear">
+                    <div class="item-title label">固定修复</div>
+                    <div class="item-input">
+
+                        <input type="number" maxlength="7"      name="gudingPrice" class="gudingPrice inputMoney" placeholder="请填写金额" value="{{gdxf}}"/>
+                    </div>
+                </div>
+                <div class="form-col g-clear">
+                    <div class="item-title label">活动修复</div>
+                    <div class="item-input">
+
+                        <input type="number" maxlength="7"    name="huodongPrice" class="huodongPrice inputMoney" placeholder="请填写金额" value="{{hdxf}}"/>
+                    </div>
+                </div>
+                <div class="form-col g-clear">
+                    <div class="item-title label">洁治费</div>
+                    <div class="item-input">
+
+                        <input type="number" maxlength="7"     name="jiezhiPrice" class="jiezhiPrice inputMoney" placeholder="请填写金额" value="{{jzf}}"/>
+                    </div>
+                </div>
+                <div class="form-col g-clear">
+                    <div class="item-title label">拔牙费</div>
+                    <div class="item-input">
+
+                        <input type="number" maxlength="7"    name="bayaPrice" class="bayaPrice inputMoney" placeholder="请填写金额" value="{{byf}}"/>
+                    </div>
+                </div>
+                <div class="form-col g-clear">
+                    <div class="item-title label">种植牙</div>
+                    <div class="item-input">
+
+                        <input type="number" maxlength="7"     name="zhongzhiPrice" class="zhongzhiPrice inputMoney" placeholder="请填写金额" value="{{zyf}}"/>
+                    </div>
+                </div>
+                <div class="form-col g-clear">
+                    <div class="item-title label">正畸费</div>
+                    <div class="item-input">
+
+                        <input type="number" maxlength="7"     name="zhengjiPrice" class="zhengjiPrice inputMoney" placeholder="请填写金额" value="{{zjf}}"/>
+                    </div>
+                </div>
+                <div class="form-col g-clear">
+                    <div class="item-title label">放射费</div>
+                    <div class="item-input">
+
+                        <input type="number" maxlength="7"     name="fangshePrice" class="fangshePrice inputMoney" placeholder="请填写金额" value="{{fsf}}"/>
+                    </div>
+                </div>
+                <div class="form-col g-clear">
+                    <div class="item-title label">麻药费</div>
+                    <div class="item-input">
+
+                        <input type="number" maxlength="7"    name="mayaoPrice" class="mayaoPrice inputMoney" placeholder="请填写金额" value="{{myf}}"/>
+                    </div>
+                </div>
+                <div class="form-col g-clear">
+                    <div class="item-title label">西药费</div>
+                    <div class="item-input">
+
+                        <input type="number"   name="xiyaoPrice" class="xiyaoPrice inputMoney" placeholder="请填写金额" value="{{xyf}}"/>
+                    </div>
+                </div>
+                <div class="form-col g-clear">
+                    <div class="item-title label">手术费</div>
+                    <div class="item-input">
+
+                        <input type="number" maxlength="7"    name="shoushuPrice" class="shoushuPrice inputMoney" placeholder="请填写金额" value="{{ssf}}"/>
+                    </div>
+                </div>
+                 <div class="form-col g-clear">
+                    <div class="item-title label">其他</div>
+                    <div class="item-input">
+                        <input type="number" maxlength="7"     name="qitaPrice" class="qitaPrice inputMoney" placeholder="请填写金额" value="{{qt}}"/>
+                    </div>
+                </div>
+            </div>
+
+        </div>

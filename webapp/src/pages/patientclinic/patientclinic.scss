@@ -1,0 +1,68 @@
+@import "../../mods/header/header.scss";
+@import "../../mods/form/form.scss";
+@import "../../libs/scss/g_icon.scss";
+@import "../../libs/scss/mixin.scss";
+@import "../../libs/scss/css3-mixin.scss";
+@import "../../exports/common.scss";
+
+body{
+    background-color:#efefef;
+}
+#container{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    font-size:.5rem ;
+    background-color:#fff;
+}
+#head{
+     background:#fff;
+     font-size:.34rem;
+     border-bottom: 1px solid #d8d8d8;
+     padding: .25rem;
+     text-align: center;
+     .m-data-filter{
+      width:1.9rem ;
+       display: inline-block;
+     }
+     .m-filter{
+         color:#0084ff;
+     }
+}
+
+.m-clinicItem{
+    background-color:#fff;
+    font-size: .32rem;
+    color:#000;
+    margin-bottom:.2rem ;
+    
+    p{
+        width:6.85rem;
+        margin: 0 auto;
+        padding-top:.3rem ;
+     span{
+         display:inline-block;
+         margin-left:.1rem ;
+     }   
+    }
+    img{
+        width:6.85rem ;
+    }
+   .m-clinicBottom{
+       font-size: .28rem;
+       color:#777777 ;
+   } 
+}
+p.no-data{
+    font-size:.3rem ;
+    color: #b3b3b3;
+    text-align: center;
+    background: url(../../images/icon/nodata-icon.png) no-repeat center 0;
+    background-size: 1.7rem 1.5rem;
+    padding-top: 2rem;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate3d(-50%,-50%,0);
+}

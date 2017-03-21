@@ -1,0 +1,117 @@
+@import "../../mods/header/header.scss";
+@import "../../mods/form/form.scss";
+@import "../../libs/scss/g_icon.scss";
+@import "../../libs/scss/mixin.scss";
+@import "../../libs/scss/css3-mixin.scss";
+@import "../../exports/common.scss";
+@import "../../mods/dateselect/dateselect.scss";
+body {
+    background-color: #ededee;
+}
+.m-bottom-fixBtn {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: #1682fb;
+    height: 1rem;
+    line-height: 1rem;
+    color: #fff;
+    text-align: center;
+    font-size: 0.34rem;
+}
+.m-fees {
+    margin-bottom: 0.25rem;
+    background-color: #fff;
+    padding: 0.3rem;
+    position: relative;
+    padding-bottom: 0;
+    height: 1.5rem;
+    p {
+        font-size: 0.28rem;
+        margin-bottom: 0.15rem;
+        span {
+            color: #000;
+        }
+        i {
+            float: right;
+            color: #777777;
+        }
+        i.colOrage {
+            color: #fe8246;
+        }
+    }
+    .m-bookBg {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: -.25rem;
+        width: 100%;
+    }
+}
+.m-feesPayWrap {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 1rem;
+    bottom: 1rem;
+    overflow: scroll;
+}
+.m-paymethod {
+    background-color: #fff;
+    padding: 0.3rem;
+    margin-top: 0.35rem;
+    textarea.beizhuMsg {
+        width: 6.9rem;
+        border: 1px solid #ddd;
+        height: 2rem;
+        margin-top: 0.4rem;
+        padding: 0.15rem;
+    }
+    p {
+        margin-top: 0.3rem;
+        .checkbox {
+            display: inline-block;
+            width: 0.35rem;
+            height: 0.35rem;
+            border: 1px solid #ddd;
+            vertical-align: middle;
+            margin-right: 0.15rem;
+        }
+        .checked {
+            background-color: #007eff;
+            border: 1px solid #007eff;
+            background: #007eff url("../../images/icon/checked-icon.png") no-repeat center;
+            background-size: 0.3rem auto;
+        }
+        input {
+            width: 1.6rem;
+            float: right;
+            border: 1px solid #ddd;
+            height: 0.6rem;
+            display: none;
+            text-align: center;
+        }
+        span {
+            color: #000;
+        }
+        i {
+            color: #777;
+        }
+        em {
+            float: right;
+        }
+        em.colOrage {
+            color: #fe8246;
+        }
+        i.colOrage {
+            color: #fe8246;
+        }
+        em.unit {
+            line-height: 0.6rem;
+            color: #777;
+            margin-left: 0.1rem;
+            display: none;
+        }
+    }
+}

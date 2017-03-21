@@ -1,0 +1,4 @@
+<!-- 该行注释不要删掉，否则模板引擎会报错 -->
+{{#each list as item}}
+<li class="{{itemClass}} item" value="{{item.value}}" data-role="list-item">{{item.text}}</li>
+{{/each}}

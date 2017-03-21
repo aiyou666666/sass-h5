@@ -1,0 +1,10 @@
+{{#each items}}
+<div class="thumb-list-items g-clear" data-jlId="{{sfjlId}}">
+  {{#ifexp sfzt '==' 1 }}<a class="js-editCharge" href="addcharge.html?hzId={{hzId}}&sfjlId={{sfjlId}}"></a>{{/ifexp}}
+    <div class="fl">
+        <p>{{sfztStr}}</p>
+        <p class="date">{{date}}</p>
+    </div>
+    <p class="fr"><span>{{ssje}}</span>元</p>
+</div>
+{{/each}}

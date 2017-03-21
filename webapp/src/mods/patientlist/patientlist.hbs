@@ -1,0 +1,21 @@
+{{#if isInfo}}
+{{#each items}}
+<a class="m-patientItem m-flex needsclick" href="patientinfo.html?id={{hzId}}&from=patientlist" data-id="{{hzId}}">
+    <div class="m-nick"><img src="{{avatar}}"/></div>
+    <div class="flex-item4 m-patientInfo">
+        <p><span class="m-patientname">{{name}}</span><span class="fr">{{zhzlrq}}</span></p>
+        <p class="info"><span>{{sex}}</span><span>{{age}}岁</span></p>
+    </div>
+</a>
+{{/each}}
+{{else}}
+{{#each items}}
+<a class="m-patientItem m-flex" href="addorder.html?id={{hzId}}" data-id={{hzId}}>
+    <div class="m-nick"><img src="{{avatar}}"/></div>
+    <div class="flex-item4 m-patientInfo">
+        <p><span class="m-patientname">{{name}}</span><span class="fr">{{zhzlrq}}</span></p>
+        <p class="info"><span>{{sex}}</span><span>{{age}}岁</span></p>
+    </div>
+</a>
+{{/each}}
+{{/if}}
