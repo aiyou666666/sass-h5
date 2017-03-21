@@ -1,4 +1,4 @@
-### 口腔SASS h5 前端项目
+###  h5 前端项目
 
 npm install  or cnpm install
 
